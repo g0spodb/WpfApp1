@@ -33,7 +33,9 @@ namespace WpfApp1
             var z = users.Where(a => a.Login == txt_login.Text && a.Password == txt_password.Password).FirstOrDefault();
             if (z != null)
             {
-                MessageBox.Show(z.FullName);
+                MessageBox.Show("good day, " + z.FullName);
+                NavigationService.Navigate(new ());
+
             }
             else
             {
