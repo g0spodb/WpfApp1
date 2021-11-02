@@ -34,7 +34,7 @@ namespace WpfApp1
             if (z != null)
             {
                 MessageBox.Show("good day, " + z.FullName);
-                NavigationService.Navigate(new ());
+                NavigationService.Navigate(new oficiant());
 
             }
             else

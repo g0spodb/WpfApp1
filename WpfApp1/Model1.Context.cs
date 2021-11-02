@@ -28,5 +28,6 @@ namespace WpfApp1
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Type> Type { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<orders> orders { get; set; }
     }
 }

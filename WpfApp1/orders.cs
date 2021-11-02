@@ -12,22 +12,13 @@ namespace WpfApp1
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class orders
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users()
-        {
-            this.orders = new HashSet<orders>();
-        }
-    
+        public int id_order { get; set; }
+        public string order { get; set; }
         public int id_user { get; set; }
-        public string FullName { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public int id_type { get; set; }
+        public string wishes { get; set; }
     
-        public virtual Type Type { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<orders> orders { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

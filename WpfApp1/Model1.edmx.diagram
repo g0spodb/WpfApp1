@@ -5,10 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="f97b3b7fd98b4ceb9290e0241f7bb9da" Name="Diagram1">
-        <EntityTypeShape EntityType="g0spodbModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="g0spodbModel.Type" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="g0spodbModel.Users" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="g0spodbModel.FK_Users_Type" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="g0spodbModel.sysdiagrams" Width="1.5" PointX="6.125" PointY="4.125" />
+        <EntityTypeShape EntityType="g0spodbModel.Type" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="g0spodbModel.Users" Width="1.5" PointX="3" PointY="0.875" />
+        <EntityTypeShape EntityType="g0spodbModel.orders" Width="1.5" PointX="5.125" PointY="1" />
+        <AssociationConnector Association="g0spodbModel.FK_Users_Type1" />
+        <AssociationConnector Association="g0spodbModel.FK_orders_Users" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

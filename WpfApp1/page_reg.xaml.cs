@@ -36,18 +36,18 @@ namespace WpfApp1
         {
             App.Current.MainWindow.Close();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_back(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_regist(object sender, RoutedEventArgs e)
         {
             var a = new Users();
             a.FullName = name_txt.Text;
             a.Login = login_txt.Text;
             a.Password = password_txt.Text;
-            a.type_id = i;
+            a.id_type = i;
             bd_connecton.connection.Users.Add(a);
             bd_connecton.connection.SaveChanges();
             MessageBox.Show("you have registered with our company, congratulations, mr " + a.FullName);

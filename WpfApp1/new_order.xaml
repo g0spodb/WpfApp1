@@ -1,0 +1,47 @@
+﻿<Page x:Class="WpfApp1.new_order"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="1000"
+      Title="new_order">
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Добавление нового заказа" FontSize="20" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="10"/>
+        <TextBlock Text="Заказ" VerticalAlignment="Center" FontSize="20" Grid.Column="0" Grid.Row="1"/>
+        <TextBox x:Name="txt_order" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock Text="Официант" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Grid.Column="0" Grid.Row="2"/>
+        <ComboBox  Grid.Column="1" Grid.Row="2" Margin="5" x:Name="txt_oficiant" ItemsSource="{Binding users}" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding FullName}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBlock Text="Пожелания"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Grid.Column="0" Grid.Row="3"/>
+        <TextBox x:Name="txt_wishes" Grid.Column="1" Grid.Row="3"/>
+        <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.ColumnSpan="2">
+            <Button Content="Добавить" Margin="10" Padding="10" Click="Button_add"/>
+            <Button Content="Назад" Margin="10" Padding="10" Click="Button_back"/>
+        </StackPanel>
+    </Grid>
+</Page>
