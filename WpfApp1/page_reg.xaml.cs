@@ -26,7 +26,7 @@ namespace WpfApp1
         public page_reg()
         {
             InitializeComponent();
-            types = new ObservableCollection<Type>(bd_connecton.connection.Type.ToList());
+            types = new ObservableCollection<Type>(bd_connecton.connection.Type.ToList()); //types в лист
             //cmd_type.Items.Add();
             this.DataContext = this;
         }

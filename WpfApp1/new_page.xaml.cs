@@ -36,17 +36,17 @@ namespace WpfApp1
                 if(z.id_type == 1) //проверка повар или официант
                 {
                     MessageBox.Show("Доброго времени бытия, официант " + z.FullName);
-                    NavigationService.Navigate(new oficiant());
+                    NavigationService.Navigate(new oficiant());//на страницу официанта
                 }
                 else
                 {
                     MessageBox.Show("Доброго времени бытия, повар " + z.FullName);
-                    NavigationService.Navigate(new povar());
+                    NavigationService.Navigate(new povar());//на страницу повара
                 }
             }
             else
             {
-                MessageBox.Show("Failed, you're dead lol.-.");
+                MessageBox.Show("Failed, you're dead lol.-.");//неверный логин или пароль
             }
         }
 

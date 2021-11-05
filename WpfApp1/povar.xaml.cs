@@ -40,7 +40,7 @@ namespace WpfApp1
 
         private void Btn_back(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new new_page());
+            NavigationService.Navigate(new new_page()); //переход на страницу авторизации
         }
     }
 }
