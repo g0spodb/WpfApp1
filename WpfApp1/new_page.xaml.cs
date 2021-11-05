@@ -29,13 +29,20 @@ namespace WpfApp1
 
         private void autho_event_click(object sender, RoutedEventArgs e)
         {
-            users = new ObservableCollection<Users>(bd_connecton.connection.Users.ToList());
-            var z = users.Where(a => a.Login == txt_login.Text && a.Password == txt_password.Password).FirstOrDefault();
+            users = new ObservableCollection<Users>(bd_connecton.connection.Users.ToList()); //таблицу в лист
+            var z = users.Where(a => a.Login == txt_login.Text && a.Password == txt_password.Password).FirstOrDefault(); //проверка на совпадение логина и пароля из бд
             if (z != null)
             {
-                MessageBox.Show("good day, " + z.FullName);
-                NavigationService.Navigate(new oficiant());
-
+                if(z.id_type == 1) //проверка повар или официант
+                {
+                    MessageBox.Show("Доброго времени бытия, официант " + z.FullName);
+                    NavigationService.Navigate(new oficiant());
+                }
+                else
+                {
+                    MessageBox.Show("Доброго времени бытия, повар " + z.FullName);
+                    NavigationService.Navigate(new povar());
+                }
             }
             else
             {
@@ -43,9 +50,9 @@ namespace WpfApp1
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void registration(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new page_reg());
+            NavigationService.Navigate(new page_reg()); //перейти на страницу регистрации
         }
     }
 }

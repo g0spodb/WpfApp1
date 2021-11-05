@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1000" Width="800">
+        Title="Ресторан Агузок" Height="400" Width="800">
     <Window.Resources>
         <Style TargetType="Button">
             <Style.Triggers>
@@ -13,6 +13,11 @@
                     <Setter Property="Background" Value="Black"/>
                 </Trigger>
             </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="40"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -23,12 +28,11 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="800"/>
+            <RowDefinition Height="400"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1" Grid.Column="1" Background="#f1c0b2">
             <Frame x:Name="frame_autho_reg" NavigationUIVisibility="Hidden"/>
-            <Button Content="back" Width="30" Height="30" Background="White" HorizontalAlignment="Left"/>
         </StackPanel>
     </Grid>
 </Window>

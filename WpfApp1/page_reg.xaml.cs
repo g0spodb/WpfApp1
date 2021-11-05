@@ -29,19 +29,13 @@ namespace WpfApp1
             types = new ObservableCollection<Type>(bd_connecton.connection.Type.ToList());
             //cmd_type.Items.Add();
             this.DataContext = this;
-
         }
-
-        private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            App.Current.MainWindow.Close();
-        }
-        private void Button_back(object sender, RoutedEventArgs e)
+        private void Btn_back(object sender, RoutedEventArgs e) //при нажатии на кнопку вернёт на страницу авторизации
         {
             NavigationService.GoBack();
         }
 
-        private void Button_regist(object sender, RoutedEventArgs e)
+        private void Btn_regist(object sender, RoutedEventArgs e) //при нажатии на кнопку все данные из текстбоксов записываются в таблицу users
         {
             var a = new Users();
             a.FullName = name_txt.Text;
@@ -50,10 +44,10 @@ namespace WpfApp1
             a.id_type = i;
             bd_connecton.connection.Users.Add(a);
             bd_connecton.connection.SaveChanges();
-            MessageBox.Show("you have registered with our company, congratulations, mr " + a.FullName);
+            MessageBox.Show("Вы успешно зарегестрированы " + a.FullName);
             NavigationService.GoBack();
         }
-        private void cmb__type(object sender, SelectionChangedEventArgs e)
+        private void cmb__type(object sender, SelectionChangedEventArgs e) //записываем в i тип для записи в таблицу users
         {
             var a = (sender as ComboBox).SelectedItem as Type;
             i = a.id_type;

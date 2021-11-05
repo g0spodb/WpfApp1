@@ -92,6 +92,9 @@
     <Compile Include="page_reg.xaml.cs">
       <DependentUpon>page_reg.xaml</DependentUpon>
     </Compile>
+    <Compile Include="povar.xaml.cs">
+      <DependentUpon>povar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -129,6 +132,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="page_reg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="povar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

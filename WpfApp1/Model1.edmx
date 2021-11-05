@@ -13,6 +13,7 @@
           <Property Name="order" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="id_user" Type="int" Nullable="false" />
           <Property Name="wishes" Type="varchar" MaxLength="50" />
+          <Property Name="ready" Type="bit" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -36,7 +37,7 @@
             <PropertyRef Name="id_user" />
           </Key>
           <Property Name="id_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FullName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FullName" Type="varchar" MaxLength="50" />
           <Property Name="Login" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="id_type" Type="int" Nullable="false" />
@@ -120,7 +121,7 @@
             <PropertyRef Name="id_user" />
           </Key>
           <Property Name="id_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FullName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="id_type" Type="Int32" Nullable="false" />
@@ -136,6 +137,7 @@
           <Property Name="id_user" Type="Int32" Nullable="false" />
           <Property Name="wishes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Users" Relationship="g0spodbModel.FK_orders_Users" FromRole="orders" ToRole="Users" />
+          <Property Name="ready" Type="Boolean" />
         </EntityType>
         <Association Name="FK_Users_Type1">
           <End Type="g0spodbModel.Type" Role="Type" Multiplicity="1" />
@@ -200,6 +202,7 @@
           <EntitySetMapping Name="orders">
             <EntityTypeMapping TypeName="g0spodbModel.orders">
               <MappingFragment StoreEntitySet="orders">
+                <ScalarProperty Name="ready" ColumnName="ready" />
                 <ScalarProperty Name="wishes" ColumnName="wishes" />
                 <ScalarProperty Name="id_user" ColumnName="id_user" />
                 <ScalarProperty Name="order" ColumnName="order" />

@@ -23,7 +23,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            frame_autho_reg.NavigationService.Navigate(new new_page());
+            frame_autho_reg.NavigationService.Navigate(new new_page()); //перейти на страницу авторизации
         }
     }
 }

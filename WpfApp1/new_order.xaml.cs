@@ -44,6 +44,7 @@ namespace WpfApp1
             a.order = txt_order.Text;
             a.id_user = i;
             a.wishes = txt_wishes.Text;
+            a.ready = false;
             bd_connecton.connection.orders.Add(a);
             bd_connecton.connection.SaveChanges();
             MessageBox.Show("Заказ добавлен");

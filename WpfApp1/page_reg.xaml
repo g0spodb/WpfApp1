@@ -28,7 +28,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Text="registration" FontSize="20" MouseDown="TextBlock_MouseDown"/>
+        <TextBlock Text="registration" FontSize="20"/>
         <TextBlock Text="name" Grid.Column="0" Grid.Row="1"/>
         <TextBlock Text="login" Grid.Column="0" Grid.Row="2"/>
         <TextBlock Text="password" Grid.Column="0" Grid.Row="3"/>
@@ -44,8 +44,8 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
         <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.ColumnSpan="2">
-            <Button Content="regist" Margin="10" Padding="10" Click="Button_regist"/>
-            <Button Content="back" Margin="10" Padding="10" Click="Button_back"/>
+            <Button Content="regist" Margin="10" Padding="10" Click="Btn_regist"/>
+            <Button Content="back" Margin="10" Padding="10" Click="Btn_back"/>
         </StackPanel>
     </Grid>
 </Page>

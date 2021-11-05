@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Collections.ObjectModel;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -17,14 +17,14 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Логика взаимодействия для oficiant.xaml
+    /// Логика взаимодействия для povar.xaml
     /// </summary>
-    public partial class oficiant : Page
+    public partial class povar : Page
     {
         public static ObservableCollection<Users> users { get; set; }
         public static ObservableCollection<orders> order { get; set; }
         public static g0spodbEntities1 db = new g0spodbEntities1();
-        public oficiant()
+        public povar()
         {
             InitializeComponent();
             users = new ObservableCollection<Users>(bd_connecton.connection.Users.ToList()); //таблицу в лист

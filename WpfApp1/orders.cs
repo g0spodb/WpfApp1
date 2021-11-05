@@ -18,6 +18,7 @@ namespace WpfApp1
         public string order { get; set; }
         public int id_user { get; set; }
         public string wishes { get; set; }
+        public Nullable<bool> ready { get; set; }
     
         public virtual Users Users { get; set; }
     }
